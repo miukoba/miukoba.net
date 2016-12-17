@@ -20,7 +20,7 @@ remote=`git ls-remote --heads 2> /dev/null | grep gh-pages || true`
 if [ -n "$remote" ]; then
   git clone -b gh-pages "${GIT_REPO}" public
   rm -rf public/*
-elsecd .
+else
   git init public
   cd public
   git checkout -b gh-pages
