@@ -604,5 +604,195 @@ mac:~$ vagrant destroy
 &lt;p&gt;見る方法やかける時間、英語熟練度等によってどれが良いかは違うと思いますので、お好きな方法をどうぞ！&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Octopressはじめました</title>
+      <link>http://www.miukoba.net/blog/2013/01/05/start-octopress/</link>
+      <pubDate>Sat, 05 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.miukoba.net/blog/2013/01/05/start-octopress/</guid>
+      <description>
+
+&lt;h2 id=&#34;octpressについて&#34;&gt;Octpressについて&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;を使いはじめました。
+Octopress は jekyll を使って作るブログ構築用フレームワークです。
+GitHub Pages と組み合わせると、とても簡単かつ無料でブログが作れます。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;あらかじめ静的ページを生成しておくという意味では、MovableTypeみたいな感じでしょうか。
+MovableTypeは使った事無いですが。&lt;/p&gt;
+
+&lt;p&gt;Octpressやjekyllについては詳しく説明してくださっているサイトがあるのでリンクだけ貼っておきます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://mattn.kaoriya.net/software/lang/ruby/20111017205717.htm&#34;&gt;Big Sky :: githubとjekyllとoctopressで作る簡単でモダンなブログ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/making-blog-with-jekyll/&#34;&gt;WordPressよりjekyllで本格的ブログを作りたくなる、かもしれないまとめ | ゆっくりと…&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tokkonopapa.github.com/blog/2011/12/30/octopress-on-github-and-bitbucket/&#34;&gt;Octopressのインストールから運用管理まで - T.I.D.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;
+
+&lt;p&gt;Octopressのドキュメント &lt;a href=&#34;http://octopress.org/docs/setup/&#34;&gt;Octopress Setup - Octopress&lt;/a&gt; を見ながら進める。&lt;/p&gt;
+
+&lt;p&gt;macbook airで、rvmを使用してruby 1.93 導入済みだったので、事前準備はとくに無くすんなり終わりました。
+Windowsだといろいろ詰まるらしい・・・？&lt;/p&gt;
+
+&lt;h2 id=&#34;初期設定-config-yml&#34;&gt;初期設定（_config.yml）&lt;/h2&gt;
+
+&lt;p&gt;こちらも公式ドキュメント &lt;a href=&#34;http://octopress.org/docs/configuring/&#34;&gt;Configuring Octopress - Octopress&lt;/a&gt; を見ながら設定。&lt;/p&gt;
+
+&lt;p&gt;変更箇所は以下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;url: http://miukoba.github.com
+title: mimemo
+subtitle: miukoba memo
+author: miukoba
+date_format: &amp;quot;%Y-%m-%d&amp;quot;
+email: miukoba@gmail.com
+excerpt_link: &amp;quot;つづきを読む&amp;quot;
+github_user: miukoba
+twitter_user: miua
+facebook_like: true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;テーマの変更&#34;&gt;テーマの変更&lt;/h2&gt;
+
+&lt;p&gt;ここにまとまっています。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes&#34;&gt;3rd Party Octopress Themes · imathis/octopress Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;プレビューをひと通り見てgreyshadeを選びました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/shashankmehta/greyshade&#34;&gt;shashankmehta/greyshade · GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ここでも、Readmeのとおり実行しただけ。colorは #2571b8（greyshadeの作者と同じ色）を指定。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git@github.com:shashankmehta/greyshade.git .themes/greyshade
+$ echo &amp;quot;\$greyshade: #2571b8;&amp;quot;
+$ rake install[&#39;greyshade&#39;]
+$ rake generate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ツイートを表示したくなかったので、_config.ymlを変更。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;twitter_tweet_count: 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;faviconの変更&#34;&gt;faviconの変更&lt;/h2&gt;
+
+&lt;p&gt;好きなpngファイルで、source/favicon.png を置き換え。&lt;/p&gt;
+
+&lt;h2 id=&#34;独自ドメインを設定&#34;&gt;独自ドメインを設定&lt;/h2&gt;
+
+&lt;p&gt;このへんを見つつ設定&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://octopress.org/docs/deploying/github/#custom_domains&#34;&gt;Deploying to Github Pages - Octopress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.glidenote.com/blog/2011/12/20/how-to-use-custom-domain-on-github-pages/&#34;&gt;GitHub PagesでCustom Domainを利用する - Glide Note - グライドノート&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;コメント欄の追加&#34;&gt;コメント欄の追加&lt;/h2&gt;
+
+&lt;p&gt;OctpressはDisqus（コメントシステム）埋め込みに標準で対応しています。&lt;/p&gt;
+
+&lt;p&gt;アカウントは持っていたので、Disqusにサイトを追加して、IDをメモ。_config.ymlに記載。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;disqus_short_name: mimemo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;はてなブックマークボタン追加&#34;&gt;はてなブックマークボタン追加&lt;/h2&gt;
+
+&lt;p&gt;source/_includes/post/sharing.html に追加。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;lt;div style=&amp;quot;float:left&amp;quot;&amp;gt;
+   &amp;lt;a href=&amp;quot;http://b.hatena.ne.jp/entry/{{ site.url }}{{ page.url }}&amp;quot; class=&amp;quot;hatena-bookmark-button&amp;quot; data-hatena-bookmark-layout=&amp;quot;standard&amp;quot; title=&amp;quot;このエントリーをはてなブックマークに追加&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;http://b.st-hatena.com/images/entry-button/button-only.gif&amp;quot; alt=&amp;quot;このエントリーをはてなブックマークに追加&amp;quot; width=&amp;quot;20&amp;quot; height=&amp;quot;20&amp;quot; style=&amp;quot;border: none;&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+   &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://b.st-hatena.com/js/bookmark_button.js&amp;quot; charset=&amp;quot;utf-8&amp;quot; async=&amp;quot;async&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+ &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;日々ブログを書くときのコマンド&#34;&gt;日々ブログを書くときのコマンド&lt;/h2&gt;
+
+&lt;h4 id=&#34;新規投稿テンプレート作成&#34;&gt;新規投稿テンプレート作成&lt;/h4&gt;
+
+&lt;p&gt;ここで指定する文字列はURLに使われるので、英数だけで指定する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rake new_post[&#39;post title&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;記事をかく&#34;&gt;記事をかく&lt;/h4&gt;
+
+&lt;p&gt;好きなエディタで作成されたファイルを編集する。あたまの &amp;mdash; から &amp;mdash; は、jekyllのFront-Matter。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter&#34;&gt;YAML Front Matter · mojombo/jekyll Wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;titleを変更する。記事タイトルに日本語を使いたい場合はこの時点で変更する。
+categories はスペース区切りで複数指定可能。&lt;/p&gt;
+
+&lt;p&gt;source/_posts/yyyy-MM-dd-post-title.markdown&lt;/p&gt;
+
+&lt;h4 id=&#34;静的ページの生成&#34;&gt;静的ページの生成&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;rake generate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;記事の確認&#34;&gt;記事の確認&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;rake preview
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;を実行後に、ブラウザで &lt;a href=&#34;http://localhost:4000/&#34;&gt;http://localhost:4000/&lt;/a&gt; にアクセス。&lt;/p&gt;
+
+&lt;h4 id=&#34;デプロイ&#34;&gt;デプロイ&lt;/h4&gt;
+
+&lt;p&gt;コマンド一発！&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;rake deploy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;ソースもpush&#34;&gt;ソースもpush&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;git add .
+git commit -m &#39;comment&#39;
+git push origin source
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;その他&#34;&gt;その他&lt;/h2&gt;
+
+&lt;h4 id=&#34;エディタ&#34;&gt;エディタ&lt;/h4&gt;
+
+&lt;p&gt;markdownエディタとしてMouを使ってます。リアルタイムプレビューが便利で見た目もキレイ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mouapp.com/&#34;&gt;Mou - Markdown editor for web developers, on Mac OS X&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こんなかんじ。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.evernote.com/shard/s29/sh/0d268d45-b3a0-49f0-babd-c9367a5530d6/d0ce0ae5fe8e6c5226b227e37c8160ad/deep/0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202013/01/05%2022:22.jpg&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;つづきを読む&#34;&gt;つづきを読む&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;lt;!-- more --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;を書くと、一覧ページでは省略され、続きを読むリンクが表示されます。&lt;/p&gt;
+
+&lt;p&gt;リンク文字列は、_config.yml の excerpt_link で変更可能。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;というわけで環境が整いましたので、頑張ってブログ書きます。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;※2013/04/21追記&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;サイドバーを色々弄りたくなったので、今はデフォルトテーマの色を変えただけに戻しています。&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

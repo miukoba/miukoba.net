@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="miukoba memo">
+
+<base href="http://www.miukoba.net/">
+<title>
+
+
+     Octopressはじめました 
+
+</title>
+<link rel="canonical" href="http://www.miukoba.net/blog/2013/01/05/start-octopress/">
+
+
+<script type="text/javascript">
+    var baseURL = 'http:\/\/www.miukoba.net\/';
+    var host = baseURL.substring(0, baseURL.length - 1).replace(/\//g, '');
+    if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
+        window.location.protocol = 'https:';
+    }
+</script>
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+<link rel="stylesheet" href="http://www.miukoba.net/css/reset.css">
+<link rel="stylesheet" href="http://www.miukoba.net/css/pygments.css">
+<link rel="stylesheet" href="http://www.miukoba.net/css/main.css">
+
+
+    <link rel="stylesheet" href="http://www.miukoba.net/css/override.css">
+
+
+
+<link rel="shortcut icon"
+
+    href="http://www.miukoba.net/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="ja">
+
+<section class="header"> 
+    <div class="container">
+        <div class="content">
+            
+              <a href="http://www.miukoba.net/"><img class="avatar" src="http://www.miukoba.net/img/miukoba.jpg" /></a>
+            
+            <a href="http://www.miukoba.net/"><div class="name">miukoba</div></a>
+            <nav>
+                <ul>
+                    <a href="http://www.miukoba.net/blog/"><li>Blog</li></a>
+                    <a href="http://www.miukoba.net/about/"><li>About</li></a>
+                    <a href="http://www.miukoba.net/code/"><li>Code</li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/miukoba" target="_blank">
+                <i class="icon ion-social-github"></i>
+            </a>
+        
+        
+        
+            <a href="//twitter.com/miua" target="_blank">
+                <i class="icon ion-social-twitter"></i>
+            </a>
+        
+
+        
+            <a href="//linkedin.com/in/miukoba" target="_blank">
+                <i class="icon ion-social-linkedin"></i>
+            </a>
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="http://www.miukoba.net/index.xml">
+                <i class="icon ion-social-rss larger"></i>
+            </a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Octopressはじめました
+
+</div>
+
+                    <div class="initials"><a href="http://www.miukoba.net/"></a></div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="2013-01-05T00:00:00">2013-01-05</div>
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h2 id="octpressについて">Octpressについて</h2>
+
+<p><a href="http://octopress.org/">Octopress</a>を使いはじめました。
+Octopress は jekyll を使って作るブログ構築用フレームワークです。
+GitHub Pages と組み合わせると、とても簡単かつ無料でブログが作れます。</p>
+
+<!-- more -->
+
+<p>あらかじめ静的ページを生成しておくという意味では、MovableTypeみたいな感じでしょうか。
+MovableTypeは使った事無いですが。</p>
+
+<p>Octpressやjekyllについては詳しく説明してくださっているサイトがあるのでリンクだけ貼っておきます。</p>
+
+<ul>
+<li><a href="http://mattn.kaoriya.net/software/lang/ruby/20111017205717.htm">Big Sky :: githubとjekyllとoctopressで作る簡単でモダンなブログ</a></li>
+<li><a href="http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/making-blog-with-jekyll/">WordPressよりjekyllで本格的ブログを作りたくなる、かもしれないまとめ | ゆっくりと…</a></li>
+<li><a href="http://tokkonopapa.github.com/blog/2011/12/30/octopress-on-github-and-bitbucket/">Octopressのインストールから運用管理まで - T.I.D.</a></li>
+</ul>
+
+<h2 id="インストール">インストール</h2>
+
+<p>Octopressのドキュメント <a href="http://octopress.org/docs/setup/">Octopress Setup - Octopress</a> を見ながら進める。</p>
+
+<p>macbook airで、rvmを使用してruby 1.93 導入済みだったので、事前準備はとくに無くすんなり終わりました。
+Windowsだといろいろ詰まるらしい・・・？</p>
+
+<h2 id="初期設定-config-yml">初期設定（_config.yml）</h2>
+
+<p>こちらも公式ドキュメント <a href="http://octopress.org/docs/configuring/">Configuring Octopress - Octopress</a> を見ながら設定。</p>
+
+<p>変更箇所は以下</p>
+
+<pre><code>url: http://miukoba.github.com
+title: mimemo
+subtitle: miukoba memo
+author: miukoba
+date_format: &quot;%Y-%m-%d&quot;
+email: miukoba@gmail.com
+excerpt_link: &quot;つづきを読む&quot;
+github_user: miukoba
+twitter_user: miua
+facebook_like: true
+</code></pre>
+
+<h2 id="テーマの変更">テーマの変更</h2>
+
+<p>ここにまとまっています。</p>
+
+<ul>
+<li><a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">3rd Party Octopress Themes · imathis/octopress Wiki</a></li>
+</ul>
+
+<p>プレビューをひと通り見てgreyshadeを選びました。</p>
+
+<ul>
+<li><a href="https://github.com/shashankmehta/greyshade">shashankmehta/greyshade · GitHub</a></li>
+</ul>
+
+<p>ここでも、Readmeのとおり実行しただけ。colorは #2571b8（greyshadeの作者と同じ色）を指定。</p>
+
+<pre><code>$ git clone git@github.com:shashankmehta/greyshade.git .themes/greyshade
+$ echo &quot;\$greyshade: #2571b8;&quot;
+$ rake install['greyshade']
+$ rake generate
+</code></pre>
+
+<p>ツイートを表示したくなかったので、_config.ymlを変更。</p>
+
+<pre><code>twitter_tweet_count: 0
+</code></pre>
+
+<h2 id="faviconの変更">faviconの変更</h2>
+
+<p>好きなpngファイルで、source/favicon.png を置き換え。</p>
+
+<h2 id="独自ドメインを設定">独自ドメインを設定</h2>
+
+<p>このへんを見つつ設定</p>
+
+<ul>
+<li><a href="http://octopress.org/docs/deploying/github/#custom_domains">Deploying to Github Pages - Octopress</a></li>
+<li><a href="http://blog.glidenote.com/blog/2011/12/20/how-to-use-custom-domain-on-github-pages/">GitHub PagesでCustom Domainを利用する - Glide Note - グライドノート</a></li>
+</ul>
+
+<h2 id="コメント欄の追加">コメント欄の追加</h2>
+
+<p>OctpressはDisqus（コメントシステム）埋め込みに標準で対応しています。</p>
+
+<p>アカウントは持っていたので、Disqusにサイトを追加して、IDをメモ。_config.ymlに記載。</p>
+
+<pre><code>disqus_short_name: mimemo
+</code></pre>
+
+<h2 id="はてなブックマークボタン追加">はてなブックマークボタン追加</h2>
+
+<p>source/_includes/post/sharing.html に追加。</p>
+
+<pre><code> &lt;div style=&quot;float:left&quot;&gt;
+   &lt;a href=&quot;http://b.hatena.ne.jp/entry/{{ site.url }}{{ page.url }}&quot; class=&quot;hatena-bookmark-button&quot; data-hatena-bookmark-layout=&quot;standard&quot; title=&quot;このエントリーをはてなブックマークに追加&quot;&gt;&lt;img src=&quot;http://b.st-hatena.com/images/entry-button/button-only.gif&quot; alt=&quot;このエントリーをはてなブックマークに追加&quot; width=&quot;20&quot; height=&quot;20&quot; style=&quot;border: none;&quot; /&gt;&lt;/a&gt;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;http://b.st-hatena.com/js/bookmark_button.js&quot; charset=&quot;utf-8&quot; async=&quot;async&quot;&gt;&lt;/script&gt;
+ &lt;/div&gt;
+</code></pre>
+
+<h2 id="日々ブログを書くときのコマンド">日々ブログを書くときのコマンド</h2>
+
+<h4 id="新規投稿テンプレート作成">新規投稿テンプレート作成</h4>
+
+<p>ここで指定する文字列はURLに使われるので、英数だけで指定する</p>
+
+<pre><code>rake new_post['post title']
+</code></pre>
+
+<h4 id="記事をかく">記事をかく</h4>
+
+<p>好きなエディタで作成されたファイルを編集する。あたまの &mdash; から &mdash; は、jekyllのFront-Matter。</p>
+
+<p><a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter">YAML Front Matter · mojombo/jekyll Wiki</a></p>
+
+<p>titleを変更する。記事タイトルに日本語を使いたい場合はこの時点で変更する。
+categories はスペース区切りで複数指定可能。</p>
+
+<p>source/_posts/yyyy-MM-dd-post-title.markdown</p>
+
+<h4 id="静的ページの生成">静的ページの生成</h4>
+
+<pre><code>rake generate
+</code></pre>
+
+<h4 id="記事の確認">記事の確認</h4>
+
+<pre><code>rake preview
+</code></pre>
+
+<p>を実行後に、ブラウザで <a href="http://localhost:4000/">http://localhost:4000/</a> にアクセス。</p>
+
+<h4 id="デプロイ">デプロイ</h4>
+
+<p>コマンド一発！</p>
+
+<pre><code>rake deploy
+</code></pre>
+
+<h4 id="ソースもpush">ソースもpush</h4>
+
+<pre><code>git add .
+git commit -m 'comment'
+git push origin source
+</code></pre>
+
+<h2 id="その他">その他</h2>
+
+<h4 id="エディタ">エディタ</h4>
+
+<p>markdownエディタとしてMouを使ってます。リアルタイムプレビューが便利で見た目もキレイ。</p>
+
+<p><a href="http://mouapp.com/">Mou - Markdown editor for web developers, on Mac OS X</a></p>
+
+<p>こんなかんじ。</p>
+
+<p><img src="https://www.evernote.com/shard/s29/sh/0d268d45-b3a0-49f0-babd-c9367a5530d6/d0ce0ae5fe8e6c5226b227e37c8160ad/deep/0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202013/01/05%2022:22.jpg" alt="image" /></p>
+
+<h4 id="つづきを読む">つづきを読む</h4>
+
+<pre><code> &lt;!-- more --&gt;
+</code></pre>
+
+<p>を書くと、一覧ページでは省略され、続きを読むリンクが表示されます。</p>
+
+<p>リンク文字列は、_config.yml の excerpt_link で変更可能。</p>
+
+<h2 id="まとめ">まとめ</h2>
+
+<p>というわけで環境が整いましたので、頑張ってブログ書きます。</p>
+
+<hr />
+
+<p><strong>※2013/04/21追記</strong></p>
+
+<p>サイドバーを色々弄りたくなったので、今はデフォルトテーマの色を変えただけに戻しています。</p>
+
+                <br>
+                <p><a href="http://www.miukoba.net/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+    var pageTracker = _gat._getTracker("UA-16305715-12");
+    pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+
