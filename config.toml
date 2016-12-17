@@ -1,0 +1,40 @@
+baseurl = "http://www.miukoba.net/"
+builddrafts = false
+canonifyurls = true
+contentdir = "content"
+languageCode = "ja"
+hasCJKLanguage = true
+layoutdir = "layouts"
+publishdir = "public"
+author = "miukoba"
+title = "mimemo"
+theme = "cocoa"
+#pygmentsuseclasses = true
+#disqusshortname = "cocoaexamplesite" # Comment out to disable Disqus.
+#pluralizelisttitles = false
+
+[permalinks]
+fixed = ":title/"
+blog = "/blog/:year/:month/:day/:slug/"
+#blog = "blog/:slug/"
+
+[params]
+author = "miukoba"
+# gravatar = "miukoba@gmail.com" # do not use in the same time as Avatar
+avatar = "img/miukoba.jpg" # path to image in static dir e.g img/avatar.png (do not use in the same time as Gravatar)
+# cachebuster = false # FIXME: See issue #32.
+dateform = "2006-01-02"
+dateformfull = "2006-01-02T15:04:05"
+description = "miukoba memo"
+#email = "miukoba@gmail.com"
+faviconfile = "img/favicon.ico"
+gatracker = "UA-16305715-12"
+github = "//github.com/miukoba"
+#facebook = "//www.facebook.com/miukoba"
+highlightjs = true
+# highlightjslanguages = ["go"] # additional languages not included in the "common" set
+initials = "" # Displayed on single post page; DEPRECATED in v0.3.0.
+lang = "ja"
+linkedin = "//linkedin.com/in/miukoba"
+twitter = "//twitter.com/miua"
+extracssfiles = [ "/css/override.css" ] # In your `static/css`, add/remove files as necessary.

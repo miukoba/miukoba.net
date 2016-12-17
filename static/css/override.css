@@ -1,0 +1,21 @@
+section.main .content .markdown ul {
+    margin-bottom: 1.25rem;
+    padding-left: 2em;
+}
+
+section.main .content .markdown li {
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.markdown ul {
+    margin-bottom: 0.25rem;
+}
+
+section.main .content .markdown ul {
+    margin-bottom: 0.25rem;
+}
+
+section.main .content .markdown ul {
+    margin-top: 0.25rem;
+}
