@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="miukoba memo">
+
+<base href="http://www.miukoba.net/">
+<title>
+
+
+     BetterTouchToolで3本指swipe up/down時にスクロールしないように設定する方法 
+
+</title>
+<link rel="canonical" href="http://www.miukoba.net/blog/2013/11/24/bettertouchtool-three-finger-up-down-event/">
+
+
+<script type="text/javascript">
+    var baseURL = 'http:\/\/www.miukoba.net\/';
+    var host = baseURL.substring(0, baseURL.length - 1).replace(/\//g, '');
+    if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
+        window.location.protocol = 'https:';
+    }
+</script>
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+<link rel="stylesheet" href="http://www.miukoba.net/css/reset.css">
+<link rel="stylesheet" href="http://www.miukoba.net/css/pygments.css">
+<link rel="stylesheet" href="http://www.miukoba.net/css/main.css">
+
+
+    <link rel="stylesheet" href="http://www.miukoba.net/css/override.css">
+
+
+
+<link rel="shortcut icon"
+
+    href="http://www.miukoba.net/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="ja">
+
+<section class="header"> 
+    <div class="container">
+        <div class="content">
+            
+              <a href="http://www.miukoba.net/"><img class="avatar" src="http://www.miukoba.net/img/miukoba.jpg" /></a>
+            
+            <a href="http://www.miukoba.net/"><div class="name">miukoba</div></a>
+            <nav>
+                <ul>
+                    <a href="http://www.miukoba.net/blog/"><li>Blog</li></a>
+                    <a href="http://www.miukoba.net/about/"><li>About</li></a>
+                    <a href="http://www.miukoba.net/code/"><li>Code</li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/miukoba" target="_blank">
+                <i class="icon ion-social-github"></i>
+            </a>
+        
+        
+        
+            <a href="//twitter.com/miua" target="_blank">
+                <i class="icon ion-social-twitter"></i>
+            </a>
+        
+
+        
+            <a href="//linkedin.com/in/miukoba" target="_blank">
+                <i class="icon ion-social-linkedin"></i>
+            </a>
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="http://www.miukoba.net/index.xml">
+                <i class="icon ion-social-rss larger"></i>
+            </a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    BetterTouchToolで3本指swipe up/down時にスクロールしないように設定する方法
+
+</div>
+
+                    <div class="initials"><a href="http://www.miukoba.net/"></a></div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="2013-11-24T00:00:00">2013-11-24</div>
+                    <div class="reading-time"><div class="middot"></div>1 minute read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                <p>BetterTouchTool で Trackpad の3本指 swipe up/ swipe down に操作を割り当てると、アプリによっては割り当てた操作だけでなく、スクロールもしてしまって不便。</p>
+
+<p></p>
+
+<p>自分の場合は、ブラウザや iTerm2 のタブ移動に割り当てており、 iTerm2 の場合はタブ移動したタイミングで少しスクロールしてしまい不便。</p>
+
+<p>スクロールしないようにするためには、設定の <code>Enable system three finger up / down swipe events</code> にチェックを入れればいい。</p>
+
+<p>予想だが、デフォルトだとシステムイベントとは別のイベントとしてBTTに設定した操作を実行しており、システムイベントのスクロールが別途実行されてしまっていると思われる。</p>
+
+<p><code>requires BTT restart</code> と書いてあるとおり、設定後は BetterTouchTool の再起動をお忘れなく。</p>
+
+<p><img src="https://www.evernote.com/shard/s29/sh/e401a120-6cd7-4195-910e-e716bfbebe7b/297986b67d14c92bb459afab17c1ee2e/deep/0/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2013-11-24-0-58.png" alt="BTTの設定箇所" /></p>
+                <br>
+                <p><a href="http://www.miukoba.net/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+    var pageTracker = _gat._getTracker("UA-16305715-12");
+    pageTracker._trackPageview();
+} catch(err) {}
+</script>
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+
