@@ -2,7 +2,6 @@
 <html lang="ja">
 
 <head>
-	<meta name="generator" content="Hugo 0.17" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 <meta name="HandheldFriendly" content="True">
@@ -15,10 +14,10 @@
 <title>
 
 
-     mimemo 
+     Octopressからhugoに乗り換えた 
 
 </title>
-<link rel="canonical" href="http://www.miukoba.net/">
+<link rel="canonical" href="http://www.miukoba.net/blog/2016/12/18/start-hugo/">
 
 
 <script type="text/javascript">
@@ -51,8 +50,6 @@
 >
 
 
-
-  <link href="http://www.miukoba.net/index.xml" rel="alternate" type="application/rss+xml" title="mimemo" />
 
 
 
@@ -117,76 +114,81 @@
     </div>
 </section>
 
-<section class="main">
+
+<section class="main post non-narrow zero-top-spacing">
     <div class="container">
         <div class="content">
-            <div class="page-heading">Blog</div>
-            <ul>
-            
-                
-                    <li class="post-item">
-    <span class="meta">2016-12-18</span>
-    <a href="http://www.miukoba.net/blog/2016/12/18/start-hugo/"><span>Octopressからhugoに乗り換えた</span></a>
-</li>
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
 
-                
-            
-                
-            
-                
-            
-                
-                    <li class="post-item">
-    <span class="meta">2014-01-14</span>
-    <a href="http://www.miukoba.net/blog/2014/01/14/unix-philosophy/"><span>UNIXという考え方―その設計思想と哲学 を読みました</span></a>
-</li>
+    Octopressからhugoに乗り換えた
 
-                
-            
-                
-                    <li class="post-item">
-    <span class="meta">2014-01-05</span>
-    <a href="http://www.miukoba.net/blog/2014/01/05/lean-from-the-trenches/"><span>リーン開発の現場 を読みました</span></a>
-</li>
+</div>
 
-                
-            
-                
-                    <li class="post-item">
-    <span class="meta">2013-12-14</span>
-    <a href="http://www.miukoba.net/blog/2013/12/14/japanese-php-docset-for-dash/"><span>PHP日本語版のDash用Docsetを作った (user notes付き)</span></a>
-</li>
+                    <div class="initials"><a href="http://www.miukoba.net/"></a></div>
+                </div>
+                <div class="meta">
+                    <div class="date" title="2016-12-18T00:00:00">2016-12-18</div>
+                    <div class="reading-time"><div class="middot"></div>1 minute read</div>
+                </div>
+            </div>
+            <div class="markdown">
+                <h2 id="理由">理由</h2>
 
-                
-            
-                
-                    <li class="post-item">
-    <span class="meta">2013-11-24</span>
-    <a href="http://www.miukoba.net/blog/2013/11/24/bettertouchtool-three-finger-up-down-event/"><span>BetterTouchToolで3本指swipe up/down時にスクロールしないように設定する方法</span></a>
-</li>
+<p>なんとなく。</p>
 
-                
-            
-                
-                    <li class="post-item">
-    <span class="meta">2013-04-28</span>
-    <a href="http://www.miukoba.net/blog/2013/04/28/5-ways-to-read-hackernews/"><span>HackerNewsを読む5つの方法</span></a>
-</li>
+<ul>
+<li>blog書こうかなと思ったけど、Octopressで作ったブログを放置しすぎて使い方を忘れていた</li>
+<li>Octopressからhugoに乗り換えた見たいな話を何度か見かけた</li>
+<li>どうせ1からなので新しいのを試してみようと思った</li>
+</ul>
 
-                
-            
-                
-                    <li class="post-item">
-    <span class="meta">2013-01-05</span>
-    <a href="http://www.miukoba.net/blog/2013/01/05/start-octopress/"><span>Octopressはじめました</span></a>
-</li>
+<p></p>
 
+<h2 id="urlを維持する">URLを維持する</h2>
+
+<ul>
+<li>permalinksとslugを使用して、Octopressのときと同じURL構造に設定
+
+<ul>
+<li>公式ドキュメント: <a href="https://gohugo.io/extras/permalinks/">Hugo - Permalinks</a></li>
+</ul></li>
+</ul>
+
+<p>config.toml</p>
+
+<pre><code>[permalinks]
+blog = &quot;/blog/:year/:month/:day/:slug/&quot;
+</code></pre>
+
+<p>各ページのmarkdownファイル、ヘッダー部分</p>
+
+<pre><code>slug: unix-philosophy
+</code></pre>
+
+<p>-&gt; <a href="http://www.miukoba.net/blog/2014/01/14/unix-philosophy/">http://www.miukoba.net/blog/2014/01/14/unix-philosophy/</a></p>
+
+<h2 id="circleciを使用した自動デプロイ設定">CircleCIを使用した自動デプロイ設定</h2>
+
+<p><a href="https://blog.yuyat.jp/post/auto-deploy-hugo-to-github-pages-with-circleci/">Hugo で作ったサイトを CircleCI で GitHub Pages に自動デプロイ | Born Too Late</a></p>
+
+<p>ほぼこのままで、パッケージだけ最新の0.17に変更しました。感謝！</p>
+
+<h2 id="コード">コード</h2>
+
+<p><a href="https://github.com/miukoba/miukoba.net">miukoba/miukoba.net</a> です</p>
+                <br>
+                <p><a href="http://www.miukoba.net/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
                 
-            
-            </ul>
+            </div>
         </div>
     </div>
 </section>
+
 
 
 <script type="text/javascript">
@@ -213,5 +215,4 @@ try {
 
 </body>
 </html>
-
 

@@ -6,8 +6,60 @@
     <description>Recent content in Blog-rsses on mimemo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 14 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.miukoba.net/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Octopressからhugoに乗り換えた</title>
+      <link>http://www.miukoba.net/blog/2016/12/18/start-hugo/</link>
+      <pubDate>Sun, 18 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.miukoba.net/blog/2016/12/18/start-hugo/</guid>
+      <description>&lt;h2 id=&#34;理由&#34;&gt;理由&lt;/h2&gt;
+
+&lt;p&gt;なんとなく。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;blog書こうかなと思ったけど、Octopressで作ったブログを放置しすぎて使い方を忘れていた&lt;/li&gt;
+&lt;li&gt;Octopressからhugoに乗り換えた見たいな話を何度か見かけた&lt;/li&gt;
+&lt;li&gt;どうせ1からなので新しいのを試してみようと思った&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;urlを維持する&#34;&gt;URLを維持する&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;permalinksとslugを使用して、Octopressのときと同じURL構造に設定
+
+&lt;ul&gt;
+&lt;li&gt;公式ドキュメント: &lt;a href=&#34;https://gohugo.io/extras/permalinks/&#34;&gt;Hugo - Permalinks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;config.toml&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[permalinks]
+blog = &amp;quot;/blog/:year/:month/:day/:slug/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;各ページのmarkdownファイル、ヘッダー部分&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;slug: unix-philosophy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-&amp;gt; &lt;a href=&#34;http://www.miukoba.net/blog/2014/01/14/unix-philosophy/&#34;&gt;http://www.miukoba.net/blog/2014/01/14/unix-philosophy/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;circleciを使用した自動デプロイ設定&#34;&gt;CircleCIを使用した自動デプロイ設定&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.yuyat.jp/post/auto-deploy-hugo-to-github-pages-with-circleci/&#34;&gt;Hugo で作ったサイトを CircleCI で GitHub Pages に自動デプロイ | Born Too Late&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ほぼこのままで、パッケージだけ最新の0.17に変更しました。感謝！&lt;/p&gt;
+
+&lt;h2 id=&#34;コード&#34;&gt;コード&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/miukoba/miukoba.net&#34;&gt;miukoba/miukoba.net&lt;/a&gt; です&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>UNIXという考え方―その設計思想と哲学 を読みました</title>
